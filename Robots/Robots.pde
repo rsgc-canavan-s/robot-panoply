@@ -15,22 +15,60 @@
 //  gordonBot.drawAt(500, 100, 0.5, 0.5);
 
 
+int scene = 1;
 
 void setup() {
 
   //create canvas
-  background(50);
   size(1000, 700);
-  DDRobot dariusbot = new DDRobot();
-  SCRobot spencerbot = new SCRobot();
+}
 
-  int counter = 0;
-  while (counter < 5) {
+void draw() {
 
-    print(50 + 100 * counter);
-    spencerbot.drawAt(50 + 125 * counter, 500 - 100 * counter, 0.5 - 0.05 * counter, 0.5 - 0.05 * counter);
-    
-    
-   counter += 1;
+  //always clear background
+  background(50);
+
+  if (scene == 1) {
+
+    DDRobot dariusbot = new DDRobot();
+    SCRobot spencerbot = new SCRobot();
+    EPRobot2 ethanbot2 = new EPRobot2();
+    ASPRobot adambot = new ASPRobot();
+    BDRobot benbot = new BDRobot();
+    DHRobot danbot = new DHRobot();
+    EPRobot ethanbot = new EPRobot();
+
+    //int counter = 0;
+    //while (counter < 5) 
+    //counter += 1;
+    //print(50 + 100 * counter);
+
+    int R2x = 850;
+    int R2y = 325;
+
+    filter(BLUR, 4);
+
+    //draw the two main robots
+    dariusbot.drawAt(400, 250);
+    spencerbot.drawAt(R2x, R2y, 3.5, 3.5);
+
+    //create speech bubble
+    fill(255);
+    ellipse(R2x - 70, R2y + 90, 100, 50);
+    //create text in speech bubble
+    fill(0);
+    textSize(16);
+    textAlign(CENTER);
+    text ("Beep-Boop!", R2x - 205, R2y + 80, 275, 125);
+
+  }
+
+  else if (scene == 2) {
   }
 } 
+void keyPressed(){
+scene += 1;
+textSize(32);
+fill(255);
+text("SCENE 2", 500, 350);
+}

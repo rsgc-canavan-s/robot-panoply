@@ -22,7 +22,7 @@ class DDRobot {
     float r = 1;
 
     //Scale of bots
-    scale(1.6 * r);
+    scale(0.75 * r);
 
     //Lighting, robot bloom effects
     //slightly fiddly, blur broken between layers
@@ -51,9 +51,6 @@ class DDRobot {
     fill(#393427);
     ellipse(x+ 300, y+ 545, 110, 10 );
 
-
-
-    filter( BLUR, 4 );
 
     //ROBOT 1 (BB8) Left
 
