@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //// This function runs once in your sketch
 //void setup() {
 
@@ -71,3 +72,7 @@ void keyPressed() {
     scene += 1;
   }
 }
+=======
+void setup() {
+} 
+>>>>>>> rsgc-ics2o-spring2016/master
