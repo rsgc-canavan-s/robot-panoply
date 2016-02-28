@@ -60,15 +60,14 @@ void draw() {
     textSize(16);
     textAlign(CENTER);
     text ("Beep-Boop!", R2x - 205, R2y + 80, 275, 125);
-
-  }
-
-  else if (scene == 2) {
+  } else if (scene == 2) {
+     textSize(32);
+    fill(255);
+    text("Scene2", 500, 350);
   }
 } 
-void keyPressed(){
-scene += 1;
-textSize(32);
-fill(255);
-text("SCENE 2", 500, 350);
+void keyPressed() {
+  if ( keyCode == ' ') {
+    scene += 1;
+  }
 }
