@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //// This function runs once in your sketch
 //void setup() {
 
@@ -62,9 +62,58 @@ void draw() {
     textAlign(CENTER);
     text ("Beep-Boop!", R2x - 205, R2y + 80, 275, 125);
   } else if (scene == 2) {
-     textSize(32);
+    //declaring all robots that I need
+    DDRobot dariusbot = new DDRobot();
+    SCRobot spencerbot = new SCRobot();
+    EPRobot2 ethanbot2 = new EPRobot2();
+    ASPRobot adambot = new ASPRobot();
+    BDRobot benbot = new BDRobot();
+    DHRobot danbot = new DHRobot();
+    EPRobot ethanbot = new EPRobot();
+    TMRobots timbot = new TMRobots();
+
+    spencerbot.drawAt(700, 400, 3.0, 3.0);
+    dariusbot.drawAt(450, 400);
+    timbot.drawAt(50, 550, 1.5, 1.5);
+    ethanbot.drawAt(150, 60, 0.75, 0.75);
+    danbot.drawAt(550, 75, 0.75, 0.75);
+
+    //creating Poe Dameron's speech bubble and text
     fill(255);
-    text("Scene2", 500, 350);
+    ellipse(450, 750, 200, 150);
+    fill(0);
+    text("R2 has the rest of the map?", 350, 725, 190, 150);
+    textAlign(CENTER);
+    //creating BB8's speech bubble and text
+    fill(255);
+    ellipse(600, 600, 110, 60);
+    fill(0);
+    textAlign(CENTER);
+    text("Bleep-blorp!", 550, 590, 100, 60);
+  } else if (scene == 3) {
+    
+    DDRobot dariusbot = new DDRobot();
+    SCRobot spencerbot = new SCRobot();
+    EPRobot2 ethanbot2 = new EPRobot2();
+    ASPRobot adambot = new ASPRobot();
+    BDRobot benbot = new BDRobot();
+    DHRobot danbot = new DHRobot();
+    EPRobot ethanbot = new EPRobot();
+    TMRobots timbot = new TMRobots();
+    
+    //drawing the characters for the scene
+    spencerbot.drawAt(775, 550, 2.0, 2.0);
+    dariusbot.drawAt(600, 625);
+    timbot.drawAt(550, 775, 1.0, 1.0);
+    ethanbot.drawAt(225, 700, 0.7, 0.7);
+    danbot.drawAt(0, 700, 0.6, 0.6);
+   
+   //creating holographic map
+   noStroke();
+   fill(30, 130, 255, 180);
+    rect(100, 100, 1000, 500);
+    fill(30, 130, 255, 180);
+    triangle(100, 600, 1100, 600, 1170, 825);
   }
 } 
 void keyPressed() {
@@ -72,7 +121,3 @@ void keyPressed() {
     scene += 1;
   }
 }
-=======
-void setup() {
-} 
->>>>>>> rsgc-ics2o-spring2016/master
