@@ -56,12 +56,15 @@ void draw() {
     //create speech bubble
     fill(255);
     ellipse(R2x - 70, R2y + 90, 100, 50);
+    
     //create text in speech bubble
     fill(0);
     textSize(16);
     textAlign(CENTER);
     text ("Beep-Boop!", R2x - 205, R2y + 80, 275, 125);
+    
   } else if (scene == 2) {
+    
     //declaring all robots that I need
     DDRobot dariusbot = new DDRobot();
     SCRobot spencerbot = new SCRobot();
@@ -84,12 +87,14 @@ void draw() {
     fill(0);
     text("R2 has the rest of the map?", 350, 725, 190, 150);
     textAlign(CENTER);
+    
     //creating BB8's speech bubble and text
     fill(255);
     ellipse(600, 600, 110, 60);
     fill(0);
     textAlign(CENTER);
     text("Bleep-blorp!", 550, 590, 100, 60);
+    
   } else if (scene == 3) {
     
     DDRobot dariusbot = new DDRobot();
@@ -114,6 +119,13 @@ void draw() {
     rect(100, 100, 1000, 500);
     fill(30, 130, 255, 180);
     triangle(100, 600, 1100, 600, 1170, 825);
+    rect(300, 250, 300, 200);
+    triangle(300, 449, 600, 449, 935, 850);
+  } else if(scene == 4){
+    fill(255);
+    text("The End", 500, 350);
+    textAlign(CENTER);
+    textSize(48);
   }
 } 
 void keyPressed() {
