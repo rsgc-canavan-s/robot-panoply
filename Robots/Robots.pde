@@ -34,6 +34,7 @@ void draw() {
 
   if (scene == 1) {
 
+    //declaring robots (not sure if I will use all of them, these are just my top picks)
     DDRobot dariusbot = new DDRobot();
     SCRobot spencerbot = new SCRobot();
     EPRobot2 ethanbot2 = new EPRobot2();
@@ -41,11 +42,6 @@ void draw() {
     BDRobot benbot = new BDRobot();
     DHRobot danbot = new DHRobot();
     EPRobot ethanbot = new EPRobot();
-
-    //int counter = 0;
-    //while (counter < 5) 
-    //counter += 1;
-    //print(50 + 100 * counter);
 
     int R2x = 850;
     int R2y = 325;
@@ -85,15 +81,14 @@ void draw() {
     textAlign(CENTER);
     text ("Beep-Boop!", R2x - 205, R2y + 80, 275, 125);
 
+    //text at the bottom of screen describing scene
     fill(255);
     rect(0, 875, 1500, 50);
-    //textAlign(CENTER, CENTER);
     fill(0);
     text("BB8 wakes up R2-D2 to find the missing part of the map", 650, 900);
-
   } else if (scene == 2) {
 
-    //declaring all robots that I need
+    //declaring robots (not sure if I will use all of them, these are just my top picks)
     DDRobot dariusbot = new DDRobot();
     SCRobot spencerbot = new SCRobot();
     EPRobot2 ethanbot2 = new EPRobot2();
@@ -102,27 +97,28 @@ void draw() {
     DHRobot danbot = new DHRobot();
     EPRobot ethanbot = new EPRobot();
     TMRobots timbot = new TMRobots();
-    
-        //creating the background
+
+    //creating the background
     stroke(0);
-    line(0, 300, 1500, 300);
+    line(0, 300, 1500, 300); //base of wall
     fill(100);
-    rect(100, 150, 400, 150);
+    rect(100, 150, 400, 150); //creating the screens on the wall
     fill(#BFF3FF);
-    rect(120, 0, 360, 150);
+    rect(120, 0, 360, 150); 
     fill(100);
-    rect(600, 150, 400, 150);
+    rect(600, 150, 400, 150); //creating screens on the wall
     fill(#BFF3FF);
     rect(620, 0, 360, 150);
     fill(255, 0, 0);
-    ellipse(720, 180, 10, 10);
+    ellipse(720, 180, 10, 10); //buttons on the screen
     ellipse(730, 180, 10, 10);
     ellipse(740, 180, 10, 10);
     fill(0, 255, 0);
-    ellipse(720, 170, 10, 10);
+    ellipse(720, 170, 10, 10); //buttons on the screen
     ellipse(730, 170, 10, 10);
     ellipse(740, 170, 10, 10);
 
+    //drawing the robots in the scene
     spencerbot.drawAt(700, 400, 3.0, 3.0);
     dariusbot.drawAt(450, 400);
     timbot.drawAt(50, 550, 1.5, 1.5);
@@ -149,10 +145,9 @@ void draw() {
     //textAlign(CENTER, CENTER);
     fill(0);
     text("BB8 tells Poe Dameron that R2-D2 has the rest of the map", 650, 900);
-    
-
   } else if (scene == 3) {
 
+    //declaring robots (not sure if I will use all of them, these are just my top picks)
     DDRobot dariusbot = new DDRobot();
     SCRobot spencerbot = new SCRobot();
     EPRobot2 ethanbot2 = new EPRobot2();
@@ -208,6 +203,8 @@ void draw() {
     fill(0);
     text("BB8 and R2-D2 show the completed map to everyone", 650, 900);
   } else if (scene == 4) {
+    
+    //this is the scrolling text
     fill(#FFEC3B);
     rotateX(PI/8);
     text("The End", 500, textPositiony);
@@ -216,6 +213,8 @@ void draw() {
     textPositiony --;
   }
 }
+
+  //this is the code to only let the space bar change the scene when pressed
 void keyPressed() {
   if ( keyCode == ' ') {
     scene += 1;
