@@ -15,6 +15,9 @@
 //  gordonBot.drawAt(100, 200, 1.0, 1.0);
 //  gordonBot.drawAt(500, 100, 0.5, 0.5);
 
+
+  //making the text slide down the page
+
 int textPositiony = 700;
 int scene = 1;
 
@@ -26,9 +29,12 @@ void setup() {
 
 void draw() {
 
-  //making the text slide down the page
-
-
+  if (frameCount % 180 == 0){
+  scene += 1;
+  }
+  
+  saveFrame("export - ####.png");
+  
   //always clear background
   background(50);
 
@@ -207,16 +213,13 @@ void draw() {
     //this is the scrolling text
     fill(#FFEC3B);
     rotateX(PI/8);
-    text("The End", 500, textPositiony);
+    text("STAR WARS: THE FORCE AWAKENS\nBy: Spencer Canavan", 500, textPositiony);
     textAlign(CENTER);
     textSize(48);
-    textPositiony --;
+    textPositiony -= 3;
   }
     if (scene == 5) {
 
-  //void draw() {
-  //line(mouseX, mouseY, 50, 50);
-  //}
    exit(); 
    }
 }
