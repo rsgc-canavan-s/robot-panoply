@@ -203,7 +203,7 @@ void draw() {
     fill(0);
     text("BB8 and R2-D2 show the completed map to everyone", 650, 900);
   } else if (scene == 4) {
-    
+
     //this is the scrolling text
     fill(#FFEC3B);
     rotateX(PI/8);
@@ -212,11 +212,18 @@ void draw() {
     textSize(48);
     textPositiony --;
   }
+    if (scene == 5) {
+
+  //void draw() {
+  //line(mouseX, mouseY, 50, 50);
+  //}
+   exit(); 
+   }
 }
 
-  //this is the code to only let the space bar change the scene when pressed
+//this is the code to only let the space bar change the scene when pressed
 void keyPressed() {
   if ( keyCode == ' ') {
     scene += 1;
   }
-}
+  }
